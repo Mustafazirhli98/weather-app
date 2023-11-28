@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2C3E50, #34495E);
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    padding-top: 35px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 100%;
+    padding: 70px;
+    background: linear-gradient(to bottom, #446CB3, #7F8C8D);
+    border-radius: 20px;
+}
+
+/* Search Component */
+
+input.form-control {
+    border: 1px solid gray;
+    border-top: none;
+    outline: none;
+}
+
+input.form-control:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.btnSearch {
+    background-color: #2C3E50;
+    color: #fff;
+    cursor: pointer;
+    border-color: #2C3E50;
+}
+
+/* Card Component */
+
+.card-container {
+    margin-top: 70px;
+}
+
+.card {
+    width: 275px;
+    text-align: center;
+    margin: 20px auto 20px auto;
+}
+
+.card-header {
+    padding: 20px;
+    font-size: 25px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body .centigrade {
+    font-size: 50px;
+}
+
+.card-footer {
+    height: 107px;
+}
+
+.card-footer .card-text {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.card-footer .max-min {
+    font-weight: bold;
+}
+
+.card-footer span {
+    display: block;
+}
+
+.notification {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* keyframes başlangıç */
+@keyframes lightRotation {
+    0% {
+        transform: translateY(0);
+        transform: rotate(0deg);
+        box-shadow: 0 0 40px rgba(255, 255, 0, 0.8); /* Güneşin parlaklığını artır */
+    }
+
+    50% {
+        transform: translateY(-20px);
+        box-shadow: 0 0 60px rgba(255, 255, 0, 0.8); /* Güneşin parlaklığını artır */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 0 0 40px rgba(255, 255, 0, 0.8); /* Güneşin parlaklığını artır */
+        transform: translateY(0);
+    }
+}
+
+/* keyframes bitiş */
+
+
+.light {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    animation: lightRotation 5s infinite linear;
+    position: relative;
+    top: 80px;
+}
