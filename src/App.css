@@ -33,6 +33,39 @@ body {
 
 /* Search Component */
 
+.homePage {
+    display: inline-block;
+    position: relative;
+    bottom: 30px;
+    color: #1e2f40;
+    cursor: pointer;
+}
+
+.homePage:hover {
+    color: #1a4163;
+}
+
+.homePageText {
+    font-size: 20px;
+    margin: 8px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button-group button {
+    width: 210px;
+    height: 70px;
+    line-height: 18px !important;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border-color: #3498db;
+}
+
 input.form-control {
     border: 1px solid gray;
     border-top: none;
@@ -45,12 +78,46 @@ input.form-control:focus {
     box-shadow: none;
 }
 
+#searchByCity {
+    border-radius: 10px;
+    border: none;
+}
+
+#searchByCity:hover {
+    background-color: #2C3E50;
+    color: #fff;
+}
+
+#searchByLocation {
+    border-radius: 10px;
+    border: none;
+}
+
+#searchByLocation:hover {
+    background-color: #2C3E50;
+}
+
 .btnSearch {
     background-color: #2C3E50;
     color: #fff;
     cursor: pointer;
     border-color: #2C3E50;
 }
+
+.btn-block {
+    margin-top: 5px;
+    width: 100%;
+    background-color: #43ad6f;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-block:hover {
+    background-color: #3a9961;
+    color: #fff;
+}
+
+
 
 /* Card Component */
 
@@ -61,7 +128,8 @@ input.form-control:focus {
 .card {
     width: 275px;
     text-align: center;
-    margin: 20px auto 20px auto;
+    margin: 0 auto 0 auto;
+    background-color: #fff
 }
 
 .card-header {
@@ -108,17 +176,20 @@ input.form-control:focus {
     0% {
         transform: translateY(0);
         transform: rotate(0deg);
-        box-shadow: 0 0 40px rgba(255, 255, 0, 0.8); /* Güneşin parlaklığını artır */
+        box-shadow: 0 0 40px rgba(255, 255, 0, 0.8);
+        /* Güneşin parlaklığını artır */
     }
 
     50% {
         transform: translateY(-20px);
-        box-shadow: 0 0 60px rgba(255, 255, 0, 0.8); /* Güneşin parlaklığını artır */
+        box-shadow: 0 0 60px rgba(255, 255, 0, 0.8);
+        /* Güneşin parlaklığını artır */
     }
 
     100% {
         transform: rotate(360deg);
-        box-shadow: 0 0 40px rgba(255, 255, 0, 0.8); /* Güneşin parlaklığını artır */
+        box-shadow: 0 0 40px rgba(255, 255, 0, 0.8);
+        /* Güneşin parlaklığını artır */
         transform: translateY(0);
     }
 }
