@@ -30,6 +30,7 @@ export const CardsComponent = () => {
                         {data.weather[0].description === "açık" && <span><FontAwesomeIcon icon={faSun} /></span>}
                         {data.weather[0].description === "parçalı az bulutlu" && <span><FontAwesomeIcon icon={faCloud} /></span>}
                         {data.weather[0].description === "hafif sisli" && <span><FontAwesomeIcon icon={faSmog} /></span>}
+                        {data.weather[0].description === "sisli" && <span><FontAwesomeIcon icon={faSmog} /></span>}
                     </div>
                     <div className="card-footer">
                         <span className="card-text">{data.weather[0].description}</span>

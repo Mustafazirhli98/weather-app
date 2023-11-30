@@ -41,7 +41,7 @@ const SearchComponent = () => {
                 }
                 {
                     optionalSearch === "searchByCity" && (
-                        <div className='animate__animated animate__bounce'>
+                        <div className='animate__animated animate__fadeInDown'>
                             {/* Şehir isminin inputa girildiği ekran */}
                             <Toast className='toast' show={isOpen}>
                                 <Toast.Body className='toastBody'>

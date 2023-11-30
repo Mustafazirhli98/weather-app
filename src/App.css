@@ -70,6 +70,7 @@ body {
 .homePageText {
     font-size: 20px;
     margin: 12px;
+    margin-left: 5px;
 }
 
 .button-group {
@@ -79,7 +80,7 @@ body {
 }
 
 .button-group button {
-    width: 210px;
+    width: 220px;
     height: 70px;
     line-height: 18px !important;
     background-color: #3498db;
@@ -103,6 +104,8 @@ input.form-control:focus {
 
 #searchByCity {
     border-radius: 10px;
+    letter-spacing: 0.5px;
+    padding: 10px;
     border: none;
 }
 
@@ -112,6 +115,8 @@ input.form-control:focus {
 }
 
 #searchByLocation {
+    letter-spacing: 0.5px;
+    padding: 10px;
     border-radius: 10px;
     border: none;
 }
@@ -204,17 +209,20 @@ input.form-control:focus {
     0% {
         transform: translateY(0);
         transform: rotate(0deg);
-        box-shadow: 0 0 40px 10px rgba(255, 255, 0, 0.8); /* Güneşin parlaklığını artır */
+        box-shadow: 0 0 40px 10px rgba(255, 255, 0, 0.8);
+        /* Güneşin parlaklığını artır */
     }
 
     50% {
         transform: translateY(-20px);
-        box-shadow: 0 0 60px 15px rgba(255, 255, 0, 0.8); /* Güneşin parlaklığını artır */
+        box-shadow: 0 0 60px 15px rgba(255, 255, 0, 0.8);
+        /* Güneşin parlaklığını artır */
     }
 
     100% {
         transform: rotate(360deg);
-        box-shadow: 0 0 40px 10px rgba(255, 255, 0, 0.8); /* Güneşin parlaklığını artır */
+        box-shadow: 0 0 40px 10px rgba(255, 255, 0, 0.8);
+        /* Güneşin parlaklığını artır */
         transform: translateY(0);
     }
 }
@@ -229,17 +237,5 @@ input.form-control:focus {
     border-radius: 50%;
     animation: lightRotation 5s infinite linear;
     position: relative;
-    top: 80px;
+    top: 120px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
