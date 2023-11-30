@@ -1,19 +1,23 @@
 import React, { useContext } from 'react'
 import { ContextAPI } from '../ContextAPI'
-import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeftLong, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Toast } from 'react-bootstrap'
 
 const SearchComponent = () => {
 
-    const { setSearchResult, searchWeather, optionalSearch, setOptionalSearch, getLocation, setData } = useContext(ContextAPI)
-    console.log(optionalSearch)
-    return (
+    const {
+        setSearchResult, searchWeather, optionalSearch, setOptionalSearch,
+        getLocation, setData, isOpen, closeToast, showToast, searchResult } = useContext(ContextAPI);
 
+
+    return (
         <div className="row">
             <div className="col-sm-12">
+                {/* Şehir bilgisini konum veya isim ile almayı seçtiğimiz ekran */}
                 {
                     !optionalSearch && (
-                        <div className="button-group">
+                        <div className="button-group  animate__animated animate__bounce">
                             <button
                                 id='searchByCity'
                                 onClick={(e) => {
@@ -37,7 +41,18 @@ const SearchComponent = () => {
                 }
                 {
                     optionalSearch === "searchByCity" && (
-                        <div>
+                        <div className='animate__animated animate__bounce'>
+                            {/* Şehir isminin inputa girildiği ekran */}
+                            <Toast className='toast' show={isOpen}>
+                                <Toast.Body className='toastBody'>
+                                    <span>Şehir bilgisi bulunamadı.</span>
+                                    <FontAwesomeIcon
+                                        className='closeIcon'
+                                        icon={faXmark}
+                                        onClick={() => closeToast()}
+                                    />
+                                </Toast.Body>
+                            </Toast>
                             <div className='homePage'
                                 onClick={() => {
                                     setOptionalSearch(false)
@@ -56,7 +71,17 @@ const SearchComponent = () => {
                                     <input type="text" className="form-control" placeholder="Şehir ismi girin"
                                         onChange={(e) => setSearchResult(e.target.value)}
                                     />
-                                    <button className="btn btnSearch" id="searchButton" type="submit">Ara</button>
+                                    <button
+                                        className="btn btnSearch"
+                                        id="searchButton"
+                                        type="submit"
+                                        onClick={() => {
+                                            if (searchResult === "") {
+                                                showToast()
+                                            }
+                                        }}>
+                                        Ara
+                                    </button>
                                 </div>
                                 <button
                                     className='btn btn-block'

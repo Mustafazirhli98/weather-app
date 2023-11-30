@@ -33,6 +33,28 @@ body {
 
 /* Search Component */
 
+.toast {
+    position: absolute;
+    width: 250px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+}
+
+.toastBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toastBody .closeIcon {
+    cursor: pointer;
+}
+
+.toastBody .closeIcon:hover {
+    height: 18px;
+}
+
 .homePage {
     display: inline-block;
     position: relative;
@@ -42,12 +64,12 @@ body {
 }
 
 .homePage:hover {
-    color: #1a4163;
+    color: #ffffffbe;
 }
 
 .homePageText {
     font-size: 20px;
-    margin: 8px;
+    margin: 12px;
 }
 
 .button-group {
@@ -64,6 +86,7 @@ body {
     color: #fff;
     cursor: pointer;
     border-color: #3498db;
+    margin: 5px;
 }
 
 input.form-control {
@@ -94,27 +117,33 @@ input.form-control:focus {
 }
 
 #searchByLocation:hover {
-    background-color: #2C3E50;
+    background-color: #3a9961;
 }
 
 .btnSearch {
-    background-color: #2C3E50;
-    color: #fff;
+    background-color: #3498db !important;
+    color: #fff !important;
+    height: 40px;
+    border: 1px solid black;
     cursor: pointer;
     border-color: #2C3E50;
 }
 
+.btnSearch:hover {
+    background-color: #2C3E50 !important;
+}
+
+
 .btn-block {
     margin-top: 5px;
     width: 100%;
-    background-color: #43ad6f;
-    color: #fff;
+    background-color: #2b4763 !important;
+    color: #fff !important;
     cursor: pointer;
 }
 
 .btn-block:hover {
-    background-color: #3a9961;
-    color: #fff;
+    background-color: #3a9961 !important;
 }
 
 
@@ -126,14 +155,13 @@ input.form-control:focus {
 }
 
 .card {
-    width: 275px;
+    width: 275px !important;
     text-align: center;
-    margin: 0 auto 0 auto;
-    background-color: #fff
+    margin: 50px auto 0 auto !important;
 }
 
 .card-header {
-    padding: 20px;
+    padding: 20px !important;
     font-size: 25px;
 }
 
@@ -176,20 +204,17 @@ input.form-control:focus {
     0% {
         transform: translateY(0);
         transform: rotate(0deg);
-        box-shadow: 0 0 40px rgba(255, 255, 0, 0.8);
-        /* Güneşin parlaklığını artır */
+        box-shadow: 0 0 40px 10px rgba(255, 255, 0, 0.8); /* Güneşin parlaklığını artır */
     }
 
     50% {
         transform: translateY(-20px);
-        box-shadow: 0 0 60px rgba(255, 255, 0, 0.8);
-        /* Güneşin parlaklığını artır */
+        box-shadow: 0 0 60px 15px rgba(255, 255, 0, 0.8); /* Güneşin parlaklığını artır */
     }
 
     100% {
         transform: rotate(360deg);
-        box-shadow: 0 0 40px rgba(255, 255, 0, 0.8);
-        /* Güneşin parlaklığını artır */
+        box-shadow: 0 0 40px 10px rgba(255, 255, 0, 0.8); /* Güneşin parlaklığını artır */
         transform: translateY(0);
     }
 }
@@ -206,3 +231,15 @@ input.form-control:focus {
     position: relative;
     top: 80px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
