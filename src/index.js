@@ -7,14 +7,17 @@ import reportWebVitals from './reportWebVitals';
 import { ContextProvider } from './ContextAPI';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ContextProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </ContextProvider>
+  <BrowserRouter>
+    <ContextProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </ContextProvider>
+  </BrowserRouter>
 );
 
 reportWebVitals();

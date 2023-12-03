@@ -3,6 +3,7 @@ import 'animate.css';
 import { ContextAPI } from '../ContextAPI';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloud, faCloudShowersHeavy, faCloudSun, faSnowflake, faSun, faSmog } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 export const CardsComponent = () => {
     const { data } = useContext(ContextAPI);

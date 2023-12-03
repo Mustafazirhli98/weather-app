@@ -63,14 +63,22 @@ body {
     cursor: pointer;
 }
 
-.homePage:hover {
-    color: #ffffffbe;
+.toHomePageLinkElement {
+    color: rgba(255, 255, 255, 0.595);
+    text-decoration: none;
 }
 
-.homePageText {
+.toHomePageLinkElement:hover {
+    color: white;
+}
+
+.toHomePageLinkElement .arrow-icon {
+    margin-left: 15px;
+}
+
+.toHomePageLinkElement .homePageText {
     font-size: 20px;
-    margin: 12px;
-    margin-left: 5px;
+    margin: 12px 12px 12px 10px;
 }
 
 .button-group {
