@@ -88,14 +88,20 @@ body {
 }
 
 .button-group button {
-    width: 220px;
+    min-width: 300px;
     height: 70px;
     line-height: 18px !important;
     background-color: #3498db;
     color: #fff;
     cursor: pointer;
-    border-color: #3498db;
     margin: 5px;
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.button-group .col-md-6 {
+    text-align: center;
 }
 
 input.form-control {
@@ -110,23 +116,9 @@ input.form-control:focus {
     box-shadow: none;
 }
 
-#searchByCity {
-    border-radius: 10px;
-    letter-spacing: 0.5px;
-    padding: 10px;
-    border: none;
-}
-
 #searchByCity:hover {
     background-color: #2C3E50;
     color: #fff;
-}
-
-#searchByLocation {
-    letter-spacing: 0.5px;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
 }
 
 #searchByLocation:hover {
@@ -145,7 +137,6 @@ input.form-control:focus {
 .btnSearch:hover {
     background-color: #2C3E50 !important;
 }
-
 
 .btn-block {
     margin-top: 5px;
@@ -246,4 +237,15 @@ input.form-control:focus {
     animation: lightRotation 5s infinite linear;
     position: relative;
     top: 120px;
+}
+
+/* 550px'den küçük cihaz için görünüm */
+@media (max-width: 550px) {
+
+        .container {
+           border-radius: 0;
+           height: 550px;
+        }
+
+
 }

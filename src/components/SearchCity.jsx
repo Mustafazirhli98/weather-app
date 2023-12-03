@@ -20,7 +20,6 @@ const SearchCity = () => {
     return (
         <>
             <div className='animate__animated animate__fadeInDown'>
-                {/* Şehir isminin inputa girildiği ekran */}
                 <Toast className='toast' show={isOpen}>
                     <Toast.Body className='toastBody'>
                         <span>Şehir bilgisi bulunamadı.</span>
@@ -36,7 +35,10 @@ const SearchCity = () => {
                         setData("")
                     }}>
                     <Link to={"/"} className='toHomePageLinkElement' onMouseOver={() => startAnimate()} onMouseLeave={() => stopAnimate()}>
-                        <FontAwesomeIcon icon={faArrowLeftLong} className={`arrow-icon animate__animated animate__infinite ${isShaking ? "animate__slideOutLeft" : ""}`} />
+                        <FontAwesomeIcon
+                            icon={faArrowLeftLong}
+                            className={`arrow-icon animate__animated animate__infinite ${isShaking ? "animate__slideOutLeft" : ""}`}
+                        />
                         <span className='homePageText'>Ana Sayfa</span>
                     </Link>
                 </div>
@@ -64,7 +66,9 @@ const SearchCity = () => {
                     </div>
                     <button
                         className='btn btn-block'
-                        onClick={() => getLocation()}
+                        onClick={() => {
+                            getLocation()
+                        }}
                     >
                         Konuma göre hava durumu
                     </button>

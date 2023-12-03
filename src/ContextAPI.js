@@ -52,7 +52,7 @@ const ContextProvider = ({ children }) => {
             const data = await response.json();
             cityLocation = data.results[0].components.province;
             setSearchResult(cityLocation);
-            setSubmitting(true); // Submit olduğunu belirt
+            setSubmitting(true);
         } catch (error) {
             console.error("Konum bilgisi alınamadı veya hava durumu sorgulanamadı.", error);
         }

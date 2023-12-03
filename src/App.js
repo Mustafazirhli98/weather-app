@@ -12,13 +12,6 @@ function App() {
 export default App;
 
 
-//TODO :
-
-//açılış ekranına güneşte olduğu gibi farklı hava durumu animasyonları eklenebilir.
-//çıkan arama sonucuna göre tıpkı açılıştaki gibi değişen bir animasyon yap.
-//card rengi bul.
-//eğer yazılan şehir bulunamıyorsa şehir bilgisi bulunamadı mesajı göster.
-//paylaş.
 
 
 
@@ -27,9 +20,7 @@ export default App;
 
 
 
-//iconlar için font awesome
-//grid tasarım için bootstrap
-//animated.css
+
 
 
 
